@@ -33,10 +33,10 @@ function criarTarefas() {
         </p>
         <div class="todosBotoes">
             <div class="tarefaConcluida">
-                <label class="checkbox-container">Tarefa concluída:
+                    <label class="checkbox-container">Tarefa concluída:
                     <input type="checkbox" id="check${contagemTarefa}" onchange="marcarConcluida(${contagemTarefa})"/>
                     <span class="checkmark"></span>
-                 </label>
+                </label>
             </div>
             <div class="botoesLista">
                 <button onclick="apagarTarefa(${contagemTarefa})">
@@ -154,13 +154,15 @@ function salvarEdicao(indice) {
             Pessoa: ${pessoa}<br>
         </p>
         <div class="todosBotoes">
-            <div class="tarefaConcluida">
-                Tarefa concluída:
-                <input type="checkbox" id="check${indice}" onchange="marcarConcluida(${indice})">
-            </div>
+        <div class="tarefaConcluida">
+            <label class="checkbox-container">Tarefa importante:
+                <input type="checkbox" id="check${indice}" onchange="marcarConcluida(${indice})"/>
+                <span class="checkmark"></span>
+             </label>
+        </div>
             <div class="botoesLista">
                 <button onclick="apagarTarefa(${indice})">Apagar</button>
-                <button onclick="editarTarefa(${indice})">Editar</button>
+                <button id="botaoEditar${indice}" onclick="editarTarefa(${indice})">Editar</button>
             </div>
         </div>
     `
