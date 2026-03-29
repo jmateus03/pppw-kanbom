@@ -155,7 +155,7 @@ function salvarEdicao(indice) {
         </p>
         <div class="todosBotoes">
             <div class="tarefaConcluida">
-                <p>Tarefa concluída:</p>
+                Tarefa concluída:
                 <input type="checkbox" id="check${indice}" onchange="marcarConcluida(${indice})">
             </div>
             <div class="botoesLista">
